@@ -1,0 +1,213 @@
+/* DESIGN SYSTEM & VARIABLES */
+:root {
+  --bg: #ffffff;
+  --bg-sub: #f4f6f9;
+  --card: #ffffff;
+  --text: #222222;
+  --sub: #555555;
+  --accent: #0066cc;
+  --border: #dddddd;
+  --btn-cancel: #e0e0e0;
+}
+
+body.dark-mode {
+  --bg: #121212;
+  --bg-sub: #1e1e1e;
+  --card: #2d2d2d;
+  --text: #f0f0f0;
+  --sub: #cccccc;
+  --accent: #3793ff;
+  --border: #444444;
+  --btn-cancel: #444444;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* HEADER (Flexbox) */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-sub);
+  border-bottom: 1px solid var(--border);
+  sticky: top;
+}
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+}
+
+/* BỐ CỤC TỔNG (CSS Grid) */
+.grid-layout {
+  display: grid;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* BANNER (Flexbox) */
+.banner-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--bg-sub);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* NỘI DUNG (Grid + Card) */
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.8rem;
+}
+.card span {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* FORM (Flexbox) */
+.form-section {
+  background: var(--bg-sub);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.field label {
+  font-weight: bold;
+}
+.field input,
+.field select,
+.field textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 4px;
+}
+.group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+/* BUTTONS */
+.btn-pri,
+.btn-sec {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+.btn-pri {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-sec {
+  background: var(--btn-cancel);
+  color: var(--text);
+}
+
+/* ASIDE & FOOTER */
+.info-aside {
+  background: var(--card);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.main-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--bg-sub);
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE (3 Mốc: Mobile, Tablet, Laptop) */
+@media (min-width: 576px) {
+  .program-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .banner-section {
+    flex-direction: row;
+    align-items: center;
+  }
+  .banner-section > * {
+    flex: 1;
+  }
+  .program-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .field {
+    flex-direction: row;
+    align-items: center;
+  }
+  .field label {
+    width: 160px;
+  }
+}
+@media (max-width: 575px) {
+  .main-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  body {
+    overflow-x: hidden;
+  } /* Tránh lỗi cuộn ngang ở 375px */
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trang đăng ký tham dự sự kiện công nghệ TechConnect 2026."
+    />
+    <title>TechConnect 2026 - Sự Kiện Công Nghệ</title>
+    <!-- Animate.css CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Khối 1: Header + Menu -->
+    <header class="main-header">
+      <h1>TechConnect</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home">Trang chủ</a></li>
+          <li><a href="#program">Chương trình</a></li>
+          <li><a href="#speakers">Diễn giả</a></li>
+          <li><a href="#location">Địa điểm</a></li>
+          <li><a href="#register">Đăng ký</a></li>
+        </ul>
+      </nav>
+      <button id="btn-theme-toggle" class="btn-sec">
+        DarkMode / LightMode
+      </button>
+    </header>
+
+    <main class="grid-layout">
+      <!-- Khối 2: Banner -->
+      <section
+        id="home"
+        class="banner-section animate__animated animate__fadeIn"
+      >
+        <div>
+          <h2 class="animate__animated animate__slideInDown">
+            Hội Thảo TechConnect 2026
+          </h2>
+          <p><strong>Thời gian:</strong> 08:00 - 17:00, 15/10/2026</p>
+          <p><strong>Địa điểm:</strong> Trung tâm Hội nghị Quốc tế, TP.HCM</p>
+          <a
+            href="#register"
+            class="btn-pri animate__animated animate__pulse animate__infinite"
+            >Đăng ký tham dự</a
+          >
+        </div>
+        <img
+          src="https://picsum.photos/id/180/600/300"
+          alt="Không gian sự kiện TechConnect"
+        />
+      </section>
+
+      <!-- Khối 3: Danh sách nội dung (6 phiên) -->
+      <section id="program">
+        <h2 class="title">Chương Trình Hội Thảo</h2>
+        <div class="program-grid">
+          <article class="card">
+            <img
+              src="https://picsum.photos/id/1025/300/180"
+              alt="Diễn giả Nguyễn Văn A"
+            />
+            <div class="card-body">
+              <span>08:30 - 09:30</span>
+              <h3>Xu hướng AI 2026</h3>
+              <p>Diễn giả: Nguyễn Văn A</p>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              src="https://picsum.photos/id/1012/300/180"
+              alt="Diễn giả Trần Thị B"
+            />
+            <div class="card-body">
+              <span>09:30 - 10:30</span>
+              <h3>Bảo mật Cloud</h3>
+              <p>Diễn giả: Trần Thị B</p>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              src="https://picsum.photos/id/1062/300/180"
+              alt="Diễn giả Lê Hoàng C"
+            />
+            <div class="card-body">
+              <span>10:45 - 11:45</span>
+              <h3>Web Accessibility</h3>
+              <p>Diễn giả: Lê Hoàng C</p>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              src="https://picsum.photos/id/1074/300/180"
+              alt="Diễn giả Phạm Minh D"
+            />
+            <div class="card-body">
+              <span>13:30 - 14:30</span>
+              <h3>Ứng dụng Smart IoT</h3>
+              <p>Diễn giả: Phạm Minh D</p>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              src="https://picsum.photos/id/1005/300/180"
+              alt="Diễn giả Hoàng Anh E"
+            />
+            <div class="card-body">
+              <span>14:30 - 15:30</span>
+              <h3>Blockchain & FinTech</h3>
+              <p>Diễn giả: Hoàng Anh E</p>
+            </div>
+          </article>
+          <article class="card">
+            <img
+              src="https://picsum.photos/id/338/300/180"
+              alt="Diễn giả Đỗ Thu F"
+            />
+            <div class="card-body">
+              <span>15:45 - 16:45</span>
+              <h3>Tọa đàm Nghề nghiệp IT</h3>
+              <p>Diễn giả: Đỗ Thu F</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Khối 4: Form Đăng ký -->
+      <section id="register" class="form-section">
+        <h2 class="title">Đăng Ký Tham Dự</h2>
+        <form action="#" method="POST" class="form-box">
+          <div class="field">
+            <label for="fullname">Họ và tên:</label
+            ><input type="text" id="fullname" name="fullname" required />
+          </div>
+          <div class="field">
+            <label for="email">Email:</label
+            ><input type="email" id="email" name="email" required />
+          </div>
+          <div class="field">
+            <label for="phone">Điện thoại:</label
+            ><input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="field">
+            <label for="dob">Ngày sinh:</label
+            ><input type="date" id="dob" name="dob" required />
+          </div>
+          <div class="field">
+            <label for="company">Đơn vị công tác:</label
+            ><input type="text" id="company" name="company" />
+          </div>
+
+          <div class="field">
+            <label>Vai trò:</label>
+            <div class="group">
+              <label
+                ><input type="radio" name="role" value="sv" checked /> Sinh
+                viên</label
+              >
+              <label
+                ><input type="radio" name="role" value="dl" /> Đi làm</label
+              >
+              <label
+                ><input type="radio" name="role" value="gv" /> Giảng viên</label
+              >
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="ticket">Loại vé:</label>
+            <select id="ticket" name="ticket">
+              <option value="thuong">Thường</option>
+              <option value="vip">VIP</option>
+              <option value="sv">Sinh viên</option>
+              <option value="nhom">Nhóm</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Phiên tham dự:</label>
+            <div class="group">
+              <label
+                ><input type="checkbox" name="session" value="1" /> Phiên
+                1</label
+              >
+              <label
+                ><input type="checkbox" name="session" value="2" /> Phiên
+                2</label
+              >
+              <label
+                ><input type="checkbox" name="session" value="3" /> Phiên
+                3</label
+              >
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="question">Câu hỏi:</label
+            ><textarea id="question" name="question" rows="3"></textarea>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn-pri">Đăng ký</button>
+            <button type="reset" class="btn-sec">Hủy</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Aside (Tăng điểm Semantic) -->
+      <aside class="info-aside">
+        <h3>Quyền lợi tham gia</h3>
+        <p>
+          Nhận tài liệu độc quyền, chứng nhận tham dự và quà tặng từ ban tổ
+          chức.
+        </p>
+      </aside>
+    </main>
+
+    <!-- Khối 5: Footer -->
+    <footer id="location" class="main-footer">
+      <p>
+        Đơn vị tổ chức: TechConnect Ltd | Địa điểm: TP.HCM | Email:
+        contact@techconnect.vn
+      </p>
+      <p>&copy; 2026 TechConnect. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.getElementById("btn-theme-toggle").onclick = () =>
+        document.body.classList.toggle("dark-mode");
+    </script>
+  </body>
+</html>
